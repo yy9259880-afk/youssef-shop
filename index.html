@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0f">
+<meta name="description" content="Découvrez la collection Youssef Shop Marrakech : sneakers, mocassins et sandales. Contact direct sur WhatsApp.">
+<title>Youssef Shop Marrakech | Collection</title>
+
+<style>
+:root {
+  --bg: #0b0b0f;
+  --card: #17171e;
+  --red: #ff3156;
+  --pink: #ff7187;
+  --white: #ffffff;
+  --muted: #b4b4c0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background:
+    radial-gradient(ellipse at 80% 0%, #441320 0%, transparent 35%),
+    radial-gradient(ellipse at 0% 45%, #17172b 0%, transparent 35%),
+    var(--bg);
+  color: var(--white);
+  font-family: Inter, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11,11,15,.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #ffffff15;
+}
+
+nav {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span { color: var(--red); }
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  color: #d5d5dc;
+  font-size: 14px;
+}
+
+.nav-links a:hover { color: var(--pink); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 19px;
+  border-radius: 50px;
+  border: 1px solid #ffffff28;
+  background: #ffffff08;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--red);
+  box-shadow: 0 10px 35px #ff315628;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--red), var(--pink));
+  border: none;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 570px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.eyebrow {
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 82px);
+  line-height: .99;
+  letter-spacing: -4px;
+  margin: 22px 0;
+}
+
+.hero h1 span { color: var(--red); }
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+}
+
+.orb {
+  position: absolute;
+  width: 85%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff315645, #ff31560b 55%, transparent 70%);
+  animation: pulse 5s ease-in-out infinite;
+}
+
+.hero-visual img {
+  position: relative;
+  z-index: 2;
+  width: 95%;
+  max-height: 420px;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 35px #000);
+  animation: float 5s ease-in-out infinite;
+  transition: transform .5s;
+}
+
+.hero-visual img:hover {
+  transform: rotateY(-12deg) rotateX(5deg) scale(1.04);
+}
+
+.floating-label {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 25px;
+  padding: 15px 20px;
+  border: 1px solid #ffffff25;
+  border-radius: 16px;
+  background: #1b1b24e8;
+  box-shadow: 0 15px 40px #0008;
+  animation: float 4s ease-in-out infinite reverse;
+}
+
+.floating-label small {
+  display: block;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+/* COLLECTION */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin: 35px 0 25px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -2px;
+  margin-top: 10px;
+}
+
+.section-heading p {
+  max-width: 430px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.product {
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #1d1d25, #111116);
+  border: 1px solid #ffffff15;
+  transform-style: preserve-3d;
+  transition: transform .35s, border-color .35s, box-shadow .35s;
+}
+
+.product:hover {
+  transform: translateY(-8px) rotateX(2deg);
+  border-color: #ff315660;
+  box-shadow: 0 20px 50px #0007;
+}
+
+.product-image {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle, #ffffff0d, transparent 70%);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 15px #0008);
+  transition: transform .5s;
+}
+
+.product:hover .product-image img {
+  transform: scale(1.09) rotate(-2deg);
+}
+
+.product-info { padding: 17px; }
+
+.category {
+  color: var(--pink);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.product h3 {
+  margin: 10px 0 8px;
+  font-size: 16px;
+}
+
+.product p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.product .btn {
+  width: 100%;
+  padding: 11px 8px;
+  font-size: 12px;
+}
+
+/* BENEFITS */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.benefit {
+  padding: 25px;
+  border: 1px solid #ffffff16;
+  border-radius: 20px;
+  background: #ffffff05;
+  transition: .3s;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  border-color: #ff315655;
+}
+
+.benefit .icon { font-size: 28px; }
+
+.benefit h3 { margin: 15px 0 10px; }
+
+.benefit p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact-box {
+  padding: 40px;
+  margin-bottom: 70px;
+  border-radius: 28px;
+  border: 1px solid #ff31563d;
+  background: radial-gradient(ellipse at 90% 0%, #ff31562a, transparent 50%), #151219;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.contact-box h2 {
+  font-size: clamp(27px, 4vw, 42px);
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+footer {
+  border-top: 1px solid #ffffff15;
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #25d366;
+  color: #06210f;
+  font-weight: 900;
+  box-shadow: 0 10px 35px #25d36640;
+  transition: .3s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.04);
+}
+
+/* SCROLL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(.95); opacity: .7; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+  }
+
+  .hero-visual { min-height: 300px; }
+
+  .hero-visual img { max-height: 340px; }
+
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .benefits { grid-template-columns: 1fr; }
+
+  .contact-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links { display: none; }
+}
+
+@media (max-width: 480px) {
+  nav { height: 65px; }
+
+  .logo { font-size: 15px; }
+
+  nav > .btn { padding: 10px 12px; font-size: 12px; }
+
+  .hero h1 {
+    font-size: 52px;
+    letter-spacing: -3px;
+  }
+
+  .products { gap: 10px; }
+
+  .product-image { height: 155px; }
+
+  .product-info { padding: 12px; }
+
+  .product h3 { font-size: 14px; }
+
+  .product p { font-size: 12px; }
+
+  .product .btn { font-size: 11px; }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading p { margin-top: 12px; }
+
+  .contact-box { padding: 25px; }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 13px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a href="#" class="logo">
+      <span>Y</span>OUSSEF SHOP <span>✦</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#collection">Collection</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a class="btn btn-primary wa-link"
+       href="https://wa.me/212707730730"
+       target="_blank" rel="noopener">
+      WhatsApp ↗
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<section class="container hero">
+
+  <div class="reveal">
+    <div class="eyebrow">Marrakech · Style au quotidien</div>
+
+    <h1>
+      Votre style.<br>
+      <span>Votre pas.</span>
+    </h1>
+
+    <p>
+      Découvrez une sélection de chaussures pour tous les jours :
+      sneakers, sandales, claquettes et modèles élégants.
+      Contactez-nous pour connaître les prix, les pointures
+      et les disponibilités.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#collection" class="btn btn-primary">
+        Explorer la collection ↓
+      </a>
+
+      <a href="https://wa.me/212707730730"
+         class="btn wa-link"
+         target="_blank" rel="noopener">
+        Commander sur WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal">
+    <div class="orb"></div>
+
+    <img
+      src="images/sneakers-blanc.jpg"
+      alt="Sneakers blanches"
+      onerror="this.style.display='none'"
+    >
+
+    <div class="floating-label">
+      <strong>Youssef Shop</strong>
+      <small>Chaussures · Marrakech</small>
+    </div>
+  </div>
+
+</section>
+
+<section class="container" id="collection">
+
+  <div class="section-heading reveal">
+    <div>
+      <div class="eyebrow">Notre sélection</div>
+      <h2>Découvrez la collection.</h2>
+    </div>
+
+    <p>
+      Parcourez les modèles et contactez-nous directement
+      pour demander le prix, les tailles et le stock disponible.
+    </p>
+  </div>
+
+  <div class="products" id="productGrid"></div>
+
+</section>
+
+<section class="container benefits reveal" id="services">
+
+  <article class="benefit">
+    <div class="icon">📍</div>
+    <h3>À Marrakech</h3>
+    <p>
+      Contactez la boutique pour connaître le point de vente
+      et les horaires.
+    </p>
+  </article>
+
+  <article class="benefit">
+    <div class="icon">💬</div>
+    <h3>Contact direct</h3>
+    <p>
+      Posez vos questions sur les modèles, les tailles,
+      les prix et les disponibilités.
+    </p>
+  </article>
+
+  <article class="benefit">
+    <div class="icon">📦</div>
+    <h3>Informations livraison</h3>
+    <p>
+      Contactez-nous pour confirmer les modalités de livraison
+      selon votre ville.
+    </p>
+  </article>
+
+</section>
+
+<section class="container contact-box reveal" id="contact">
+
+  <div>
+    <h2>Vous avez trouvé votre style ?</h2>
+    <p>
+      Écrivez-nous pour vérifier les tailles, les couleurs
+      et le prix du modèle choisi.
+    </p>
+  </div>
+
+  <a class="btn btn-primary wa-link"
+     href="https://wa.me/212707730730"
+     target="_blank" rel="noopener">
+    Discuter sur WhatsApp ↗
+  </a>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <span class="logo">YOUSSEF SHOP <span>✦</span></span>
+    <span>Marrakech, Maroc</span>
+    <span>© <span id="year"></span> Youssef Shop Marrakech</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float wa-link"
+   href="https://wa.me/212707730730"
+   target="_blank" rel="noopener"
+   aria-label="Contacter la boutique sur WhatsApp">
+  <span>●</span> WhatsApp
+</a>
+
+<script>
+/*
+  IMPORTANT :
+  Remplace le numéro WhatsApp ci-dessous par le numéro confirmé
+  de la boutique, au format international sans + ni espaces.
+*/
+const WHATSAPP_NUMBER = "212707730730";
+
+const products = [
+  {
+    image: "mocassin-beige.jpg",
+    name: "Mocassins beige",
+    category: "Mocassins",
+    description: "Style élégant au quotidien"
+  },
+  {
+    image: "mocassin-marron.jpg",
+    name: "Mocassins marron",
+    category: "Mocassins",
+    description: "Un look classique"
+  },
+  {
+    image: "mocassin-noir.jpg",
+    name: "Mocassins noirs",
+    category: "Mocassins",
+    description: "Style habillé et moderne"
+  },
+  {
+    image: "sandales-vertes.jpg",
+    name: "Sandales à boucles",
+    category: "Sandales",
+    description: "Style décontracté"
+  },
+  {
+    image: "claquettes-noir-rayures.jpg",
+    name: "Claquettes à rayures",
+    category: "Claquettes",
+    description: "Confort au quotidien"
+  },
+  {
+    image: "claquettes-rose.jpg",
+    name: "Claquettes roses",
+    category: "Claquettes",
+    description: "Un style léger"
+  },
+  {
+    image: "claquettes-noir.jpg",
+    name: "Claquettes noires",
+    category: "Claquettes",
+    description: "Un essentiel du quotidien"
+  },
+  {
+    image: "sneakers-blanc.jpg",
+    name: "Sneakers blanches",
+    category: "Sneakers",
+    description: "Style urbain"
+  },
+  {
+    image: "sneakers-beige.jpg",
+    name: "Sneakers beige",
+    category: "Sneakers",
+    description: "Look casual"
+  },
+  {
+    image: "sneakers-noir-blanc.jpg",
+    name: "Sneakers noir et blanc",
+    category: "Sneakers",
+    description: "Style streetwear"
+  },
+  {
+    image: "chaussures-enfant-rose.jpg",
+    name: "Sneakers enfant roses",
+    category: "Enfant",
+    description: "Modèle enfant illustratif"
+  },
+  {
+    image: "sandales-enfant-rose.jpg",
+    name: "Sandales enfant roses",
+    category: "Enfant",
+    description: "Modèle enfant illustratif"
+  }
+];
+
+const grid = document.getElementById("productGrid");
+
+function createProductCard(product) {
+  const card = document.createElement("article");
+  card.className = "product reveal";
+
+  const imageBox = document.createElement("div");
+  imageBox.className = "product-image";
+
+  const image = document.createElement("img");
+  image.src = "images/" + product.image;
+  image.alt = product.name;
+  image.loading = "lazy";
+
+  image.onerror = function () {
+    this.alt = "Image introuvable : " + product.image;
+    this.style.opacity = "0.2";
+  };
+
+  imageBox.appendChild(image);
+
+  const info = document.createElement("div");
+  info.className = "product-info";
+
+  const category = document.createElement("div");
+  category.className = "category";
+  category.textContent = product.category;
+
+  const title = document.createElement("h3");
+  title.textContent = product.name;
+
+  const description = document.createElement("p");
+  description.textContent =
+    product.description + " · Prix et pointures sur demande";
+
+  const button = document.createElement("a");
+  button.className = "btn btn-primary";
+  button.target = "_blank";
+  button.rel = "noopener";
+
+  const message =
+    "Bonjour Youssef Shop Marrakech ! Je souhaite me renseigner sur " +
+    product.name +
+    ". Quel est son prix, quelles pointures sont disponibles et est-il en stock ?";
+
+  button.href =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
+
+  button.textContent = "Demander sur WhatsApp ↗";
+
+  info.append(category, title, description, button);
+  card.append(imageBox, info);
+
+  return card;
+}
+
+products.forEach(function (product) {
+  grid.appendChild(createProductCard(product));
+});
+
+/* Numéro WhatsApp utilisé par les boutons généraux */
+document.querySelectorAll(".wa-link").forEach(function (link) {
+  link.href = "https://wa.me/" + WHATSAPP_NUMBER;
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* Animation des éléments au scroll */
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(function (element) {
+    observer.observe(element);
+  });
+} else {
+  document.querySelectorAll(".reveal").forEach(function (element) {
+    element.classList.add("visible");
+  });
+}
+</script>
+
+</body>
+</html>
