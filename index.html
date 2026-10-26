@@ -505,7 +505,7 @@ footer {
     </div>
 
     <a class="btn btn-primary wa-link"
-       href="https://wa.me/212707730730"
+       href="https://wa.me/212708077330"
        target="_blank" rel="noopener">
       WhatsApp ↗
     </a>
@@ -536,7 +536,7 @@ footer {
         Explorer la collection ↓
       </a>
 
-      <a href="https://wa.me/212707730730"
+      <a href="https://wa.me/212708077330"
          class="btn wa-link"
          target="_blank" rel="noopener">
         Commander sur WhatsApp
@@ -548,7 +548,7 @@ footer {
     <div class="orb"></div>
 
     <img
-      src="images/sneakers-blanc.jpg"
+      src="sneakers-blanc.jpg"
       alt="Sneakers blanches"
       onerror="this.style.display='none'"
     >
@@ -621,7 +621,7 @@ footer {
   </div>
 
   <a class="btn btn-primary wa-link"
-     href="https://wa.me/212707730730"
+     href="https://wa.me/212708077330"
      target="_blank" rel="noopener">
     Discuter sur WhatsApp ↗
   </a>
@@ -639,7 +639,7 @@ footer {
 </footer>
 
 <a class="whatsapp-float wa-link"
-   href="https://wa.me/212707730730"
+   href="https://wa.me/212708077330"
    target="_blank" rel="noopener"
    aria-label="Contacter la boutique sur WhatsApp">
   <span>●</span> WhatsApp
@@ -651,80 +651,80 @@ footer {
   Remplace le numéro WhatsApp ci-dessous par le numéro confirmé
   de la boutique, au format international sans + ni espaces.
 */
-const WHATSAPP_NUMBER = "212707730730";
+const WHATSAPP_NUMBER = "212708077330";
 
 const products = [
   {
     image: "mocassin-beige.jpg",
     name: "Mocassins beige",
     category: "Mocassins",
-    description: "Style élégant au quotidien"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "mocassin-marron.jpg",
     name: "Mocassins marron",
     category: "Mocassins",
-    description: "Un look classique"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "mocassin-noir.jpg",
     name: "Mocassins noirs",
     category: "Mocassins",
-    description: "Style habillé et moderne"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "sandales-vertes.jpg",
-    name: "Sandales à boucles",
+    name: "Sandales vertes",
     category: "Sandales",
-    description: "Style décontracté"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "claquettes-noir-rayures.jpg",
-    name: "Claquettes à rayures",
+    name: "Claquettes noires à rayures",
     category: "Claquettes",
-    description: "Confort au quotidien"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "claquettes-rose.jpg",
     name: "Claquettes roses",
     category: "Claquettes",
-    description: "Un style léger"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "claquettes-noir.jpg",
     name: "Claquettes noires",
     category: "Claquettes",
-    description: "Un essentiel du quotidien"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "sneakers-blanc.jpg",
     name: "Sneakers blanches",
     category: "Sneakers",
-    description: "Style urbain"
+    description: "Modèle présenté dans la collection"
   },
   {
-    image: "sneakers-beige.jpg",
-    name: "Sneakers beige",
-    category: "Sneakers",
-    description: "Look casual"
+    image: "sneakers-beige-enfant.jpg",
+    name: "Sneakers beige enfant",
+    category: "Enfant",
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "sneakers-noir-blanc.jpg",
     name: "Sneakers noir et blanc",
     category: "Sneakers",
-    description: "Style streetwear"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "chaussures-enfant-rose.jpg",
-    name: "Sneakers enfant roses",
+    name: "Sneakers roses enfant",
     category: "Enfant",
-    description: "Modèle enfant illustratif"
+    description: "Modèle présenté dans la collection"
   },
   {
     image: "sandales-enfant-rose.jpg",
-    name: "Sandales enfant roses",
+    name: "Sandales roses enfant",
     category: "Enfant",
-    description: "Modèle enfant illustratif"
+    description: "Modèle présenté dans la collection"
   }
 ];
 
@@ -738,7 +738,7 @@ function createProductCard(product) {
   imageBox.className = "product-image";
 
   const image = document.createElement("img");
-  image.src = "images/" + product.image;
+  image.src = product.image;
   image.alt = product.name;
   image.loading = "lazy";
 
